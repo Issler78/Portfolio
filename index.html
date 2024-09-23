@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Matheus Issler">
+    <meta name="keywords" content="Portfolio, Python, Automações, Automation, Dev, Developer">
+    <meta name="description" content="Me chamo Matheus Issler, e neste portfólio está uma pequena amostra dos meus trabalhos e habilidades, além de mostrar um pouco sobre mim.">
+    
+    <title>&lt;Issler/&gt;</title>
+    <link rel="icon" type="image/x-icon" href="images/Issler.png">
+
+    <link rel="stylesheet" href="assets/app.css">
+    <script src="https://kit.fontawesome.com/8782a700f2.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+</head>
+<body id="inicio">
+
+    <header>
+        <div class="interface">
+            <div class="name-title">
+                <a href="#inicio" class="navigation">
+                    ISSLER
+                </a>
+            </div>
+
+            <span><span class="symbol">&lt;</span>Hello World!<i class="fa-solid fa-hand-peace"></i><span class="symbol">/&gt;</span></span>
+
+            <nav class="menu-desktop">
+                <ul>
+                    <li><a href="#inicio" class="navigation">Início</a></li>
+                    <li><a href="#sobre" class="navigation">Sobre</a></li>
+                    <li><a href="#projetos" class="navigation">Projetos</a></li>
+                    <li><a href="#contato" class="navigation">Contato</a></li>
+                </ul>
+            </nav>
+
+            <div class="btn-abrir-menu" id="btn-menu">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+
+            <div class="menu-mobile" id="menu-mobile">
+                <div class="btn-fechar">
+                    <i class="fa-solid fa-xmark"></i>
+                </div>
+
+                <nav>
+                    <ul>
+                        <li><a href="#inicio" class="navigation">Início</a></li>
+                        <li><a href="#sobre" class="navigation">Sobre</a></li>
+                        <li><a href="#projetos" class="navigation">Projetos</a></li>
+                        <li><a href="#contato" class="navigation">Contato</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="overlay-menu" id="overlay-menu"></div>
+        </div>
+    </header>
+
+    <main>
+        <section class="topo-do-site">
+            <div class="interface">                    
+                <div class="image">
+                    <div class="name">
+                        <h2>Matheus</h2>
+                        <h1>Issler</h1>
+                    </div>
+                    <h2>Developer</h2>
+                    <ul class="contatos">
+                        <li>
+                            <a href="https://www.linkedin.com/in/matheus-issler-7a3029201/" target="_blank">
+                                <i class="fa-brands fa-linkedin"></i>
+                            </a>
+                        <li>
+                            <a href="#contato" class="navigation">
+                                <i class="fa-solid fa-envelope"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/Issler78" target="_blank">
+                                <i class="fa-brands fa-github"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="sobre" id="sobre">
+            <div class="topo-sobre">
+                <h2 id="class">
+                    <span class="symbol">&lt;</span>Sobre Mim<span class="symbol">/&gt;</span>
+                </h2>
+            </div>
+
+            <div class="texto-sobre">
+                <span>Apaixonado por games e tecnologia, logo cedo decidi me aprofundar na programação.</span>
+
+                <span>Sou obcecado em aprender e curioso para saber como tudo realmente funciona, acretido que a curiosidade é fundamental como a dedicação para continuar aprendendo e foi isso que me motivou a chegar até aqui.</span>
+
+                <span>Atualmente estou focado e apaixonado em criar automações úteis e criativas para o dia a dia com <b>Python</b>, mas também tenho profundo conhecimento web com <b>PHP</b>, o que similarmente, me fez desenvolver habilidades em <b>HTML</b>, <b>CSS</b> e <b>JS</b>.</span>
+            </div>
+
+            <ul class="contatos">
+                <li>
+                    <a href="https://www.linkedin.com/in/matheus-issler-7a3029201/" target="_blank">
+                        <i class="fa-brands fa-linkedin"></i>
+                    </a>
+                <li>
+                    <a href="#contato" class="navigation">
+                        <i class="fa-solid fa-envelope"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://github.com/Issler78" target="_blank">
+                        <i class="fa-brands fa-github"></i>
+                    </a>
+                </li>
+            </ul>
+        </section>
+
+        <section class="projetos" id="projetos">
+            <div class="topo-projetos">
+                <h2 class="title">
+                    <span class="symbol">&lt;</span>Projetos<span class="symbol">/&gt;</span>
+                </h2>
+            </div>
+
+            <div class="container">
+                <div class="content">
+                    <h1>Mini Blog</h1>
+                    <p>O projeto que eu mais aprendi ao criar ele! Um mini blog pessoal, onde tive que criar um mini System Design para implementar ele. Com funções de autenticação de usuário feita do zero, padrões de arquitetura de software (como Middlewares, Services, DTOs, etc), este blog permite que usuários comentem em publicações criadas pelo admin (que pode ser mudado nas configurações do arquivo .env) e comentem em outras respostas.</p>
+                    <p><b>PHP, Laravel 10, Bootstrap v5</b></p>
+                    <div class="buttons">
+                        <a href="https://github.com/Issler78/PersonalBlog" class="btn" target="_blank">GitHub <i class="fa-brands fa-github"></i></a>
+                    </div>
+                </div>
+                <video src="videos/video-blog.mp4" width="500" autoplay muted loop></video>
+            </div>
+
+            <div class="container">
+                <div class="content">
+                    <h1>Kanban</h1>
+                    <p>Este projeto é um Quadro Kanban (gerenciador de tarefas) simples, que permite os usuários organizarem suas tarefas em "To Do", "Doing" e "Done". Este projeto foi meu primeiro aprofundamento em autenticação de usuário, sendo feito pelas ferramentas do Jetstream.</p>
+                    <p><b>PHP, Laravel 10, Bootstrap v5, Jetstream v4</b></p>
+                    <div class="buttons">
+                        <a href="https://github.com/Issler78/kanban-laravel" class="btn" target="_blank">GitHub <i class="fa-brands fa-github"></i></a>
+                    </div>
+                </div>
+                <video src="videos/video-kanban.mp4" autoplay loop muted width="500"></video>
+            </div>
+
+            <div class="container">
+                <div class="content">
+                    <h1>Cadastro de Produtos</h1>
+                    <p>Um dos meus primeiros projetos de automação. O programa consiste em ler uma tabela excel com vários produtos, e salvar cada um em um site. Uma tarefa que poderia ser repetitiva no trabalho, pode ser automatizada com algumas linhas de código.</p>
+                    <p><b>Python, Selenium, Openpyxl</b></p>
+                    <div class="buttons">
+                        <a href="https://github.com/Issler78/Projeto-Real-Freelancer" class="btn" target="_blank">GitHub <i class="fa-brands fa-github"></i></a>
+                    </div>
+                </div>
+                <video src="videos/video-cadastro.mp4" width="500" autoplay muted loop></video>
+            </div>
+
+            <div class="container">
+                <div class="content">
+                    <h1>Automação Climática</h1>
+                    <p>Uma automação criada a partir de uma API de clima. O projeto consiste em pegar dados meteorológicos da API (Weather API) e mandar um email para um destinatário específico. Combinando este programa com o Task Scheduler do Windows, você pode receber um email todos os dias com os dados daquele dia.</p>
+                    <p><b>Python, Weather API, Requests, SMTP Lib</b></p>
+                    <div class="buttons">
+                        <a href="https://github.com/Issler78/Weather-Automation" class="btn" target="_blank">GitHub <i class="fa-brands fa-github"></i></a>
+                    </div>
+                </div>
+                <img src="images/captura-weather.jpg" alt="captura de tela do projeto de automação climática" width="300" height="300">
+            </div>
+        </section>
+
+        <section class="contato" id="contato">
+            <div class="topo-contato">
+                <h2 class="title">
+                    <span class="symbol">&lt;</span>Contato<span class="symbol">/&gt;</span>
+                </h2>
+            </div>
+
+            <div class="content-contato">
+                <form action="#" class="form-contato" method="post">
+                    <div class="field">
+                        <label for="nome-input">Nome:</label>
+                        <input type="text" name="nome-input" id="nome-input" class="item">
+                        <div class="error-txt">O campo nome é obrigatório</div>
+                    </div>
+
+                    <div class="field">
+                        <label for="email-input">E-Mail:</label>
+                        <input type="email" name="email-input" id="email-input" class="item">
+                        <div class="error-txt email">O campo e-mail é obrigatório</div>
+                    </div>
+
+                    <div class="field">
+                        <label for="mensagem-input">Mensagem:</label>
+                        <textarea name="mensagem-input" id="mensagem-input" class="item"></textarea>
+                        <div class="error-txt">O campo mensagem é obrigatório</div>
+                    </div>
+
+                    <div class="last-row-form">
+                        <button type="submit">Enviar Mensagem</button>
+
+                        <div class="alert-message">Mensagem enviada com sucesso!</div>
+                    </div>
+                </form>
+
+                <div class="text-contato">
+                    <p>Se você se interessou pelo meu trabalho ou tem alguma dúvida, sinta-se à vontade para entrar em contato comigo! Você pode me mandar um e-mail diretamente por este formulário, ou, se preferir, aqui está meu telefone:</p>
+                    <div class="row-contatos">
+                        <div class="telefone">
+                            <i class="fa-solid fa-phone"></i>
+                            <span>54 99657 3462</span>
+                        </div>
+                        <ul class="contatos">
+                            <li>
+                                <a href="https://www.linkedin.com/in/matheus-issler-7a3029201/" target="_blank">
+                                    <i class="fa-brands fa-linkedin"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://github.com/Issler78" target="_blank">
+                                    <i class="fa-brands fa-github"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="assets/menu.js" defer></script>
+    <script src="assets/sendmail.js"></script>
+    <script src="assets/scrollreveal.js"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+</body>
+</html>
