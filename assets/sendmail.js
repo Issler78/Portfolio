@@ -7,6 +7,7 @@ const alertmessage = document.querySelector('.alert-message');
 function checkInputs() {
     const items = document.querySelectorAll('.item');
 
+    // Verifica para cada input se esta vazio, se estiver adicionar classe de error nele
     for (const item of items) {
         if (item.value == "") {
             item.classList.add("error");
@@ -34,6 +35,7 @@ function checkInputs() {
 }
 
 function checkEmail() {
+    // Verifica via um Regex se o campo de email esta válido
     const emailRegex = /^([a-z\d\.-]+)@([a-z\d-]+)\.([a-z]{2,3})(\.[a-z]{2,3})?$/;
     const errorTxtEmail = document.querySelector(".error-txt.email");
 
@@ -53,34 +55,49 @@ function checkEmail() {
 }
 
 function sendEmail() {
-    const bodyMessage = `Nome: ${nome.value}<br><br> E-Mail: ${email.value}<br><br> Mensagem: ${body.value}`;
+    // Dados do formulário
+    const formData = new FormData(form);
+    formData.set('subject', `Mensagem de contato de ${nome.value}`);
 
-    Email.send({
-        SecureToken : "007ccf56-9ec0-41c4-9386-c0c71ad05b12",
-        To : 'isslercontato1901@gmail.com',
-        From : `${email.value}`,
-        Subject : `Mensagem de contato de ${nome.value}`,
-        Body : bodyMessage
-    }).then(
-        message => {
-            console.log(message)
-            if (message == "OK") {
-                // Mensagem de alerta
-                alertmessage.style.visibility = 'visible';
-                alertmessage.style.opacity = '1';
-            }
+    // Transforma o form data em JSON
+    const JSONform = JSON.stringify(Object.fromEntries(formData)); 
+
+    
+
+    // Envia a requisição AJAX usando fetch
+    fetch('https://api.staticforms.xyz/submit', {
+        method: 'POST',
+        body: JSONform,
+        headers: {
+            'Content-Type': 'application/json'
         }
-    );
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.success) {
+            // Exibe a mensagem de alerta
+            alertmessage.style.visibility = 'visible';
+            alertmessage.style.opacity = '1';
+        } else {
+            console.log('Erro: ', data.message);
+        }
+    })
+    .catch(error => {
+        console.log('Erro: ', error);
+    });
 }
 
 form.addEventListener('submit', (e) => {
     e.preventDefault();
-    
+
+    // Valida os inputs
     checkInputs();
 
     if (!nome.classList.contains("error") && !email.classList.contains("error") && !body.classList.contains("error")) {
+        // Envia o email
         sendEmail();
 
+        // Reseta o formulario
         form.reset();
         return false;
     }

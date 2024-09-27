@@ -183,22 +183,25 @@
             </div>
 
             <div class="content-contato">
-                <form action="#" class="form-contato" method="post">
+                <form class="form-contato" method="post">
+                    <input type="hidden" name="accessKey" value="cb07e808-47d5-41f1-b501-eb0e8586133e">
+                    <input type="hidden" name="subject" value="">
+
                     <div class="field">
-                        <label for="nome-input">Nome:</label>
-                        <input type="text" name="nome-input" id="nome-input" class="item">
+                        <label for="name">Nome:</label>
+                        <input type="text" name="name" id="nome-input" class="item">
                         <div class="error-txt">O campo nome é obrigatório</div>
                     </div>
 
                     <div class="field">
-                        <label for="email-input">E-Mail:</label>
-                        <input type="email" name="email-input" id="email-input" class="item">
+                        <label for="email">E-Mail:</label>
+                        <input type="email" name="email" id="email-input" class="item">
                         <div class="error-txt email">O campo e-mail é obrigatório</div>
                     </div>
 
                     <div class="field">
-                        <label for="mensagem-input">Mensagem:</label>
-                        <textarea name="mensagem-input" id="mensagem-input" class="item"></textarea>
+                        <label for="message">Mensagem:</label>
+                        <textarea name="message" id="mensagem-input" class="item"></textarea>
                         <div class="error-txt">O campo mensagem é obrigatório</div>
                     </div>
 
@@ -235,8 +238,7 @@
     </main>
 
     <script src="assets/menu.js" defer></script>
-    <script src="assets/sendmail.js"></script>
-    <script src="assets/scrollreveal.js"></script>
-    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script src="assets/sendmail.js" defer></script>
+    <script src="assets/scrollreveal.js" defer></script>
 </body>
 </html>

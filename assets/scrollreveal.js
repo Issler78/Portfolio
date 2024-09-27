@@ -20,3 +20,19 @@ sr.reveal('.container', {
     easing: 'ease-in-out',
     reset: true
 });
+
+sr.reveal('form', {
+    origin: 'left',
+    distance: '500px',
+    duration: 1500,
+    easing: 'ease-in-out',
+    reset: true
+});
+
+sr.reveal('.text-contato', {
+    origin: 'right',
+    distance: '500px',
+    duration: 1500,
+    easing: 'ease-in-out',
+    reset: true
+})

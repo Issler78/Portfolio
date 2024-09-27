@@ -16,6 +16,7 @@ body {
 
 main {
     padding-top: 64px;
+    overflow-x: hidden;
 }
 
 .interface {
